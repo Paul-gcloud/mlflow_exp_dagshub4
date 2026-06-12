@@ -8,12 +8,12 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score,precision_score,recall_score,f1_score,confusion_matrix
 import mlflow
 import mlflow.sklearn
-import dagshub 
+import dagshub
 
-dagshub.init(repo_owner='faithvineco', repo_name='mlflow_exp_dagshub3', mlflow=True)
+dagshub.init(repo_owner='faithvineco', repo_name='mlflow_exp_dagshub4', mlflow=True)
 
 mlflow.set_experiment("water_exp2")
-mlflow.set_tracking_uri('https://dagshub.com/faithvineco/mlflow_exp_dagshub3.mlflow')
+mlflow.set_tracking_uri('https://dagshub.com/faithvineco/mlflow_exp_dagshub4.mlflow')
 data = pd.read_csv(r"C:\Users\USER\exp-tracking-dvc66\data\water_potability.csv")
 
 train_data, test_data = train_test_split(data, test_size=0.20, random_state=42)
